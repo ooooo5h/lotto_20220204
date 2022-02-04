@@ -1,3 +1,5 @@
+import random
+
 input_numbers = []
 
 for i in range(6):
@@ -20,5 +22,19 @@ for i in range(6):
 input_numbers.sort()
 print(f'내 숫자 : {input_numbers}')
 
+win_nums = []
 
+for i in range(6):
     
+    while True:
+        random_num = random.randint(1,45)
+        
+        duplicated_ok = random_num not in win_nums
+        
+        if duplicated_ok:
+            win_nums.append(random_num)
+            break
+        
+win_nums.sort()        
+print(f'당첨번호')
+print(win_nums)
