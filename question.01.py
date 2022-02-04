@@ -35,12 +35,23 @@ for i in range(6):
             win_nums.append(random_num)
             break
         
-win_nums.sort()        
+win_nums.sort()       
+
+while True:
+    bonus_num = random.randint(1, 45)
+    duplicated_ok = bonus_num not in win_nums
+    
+    if duplicated_ok:
+        break
+
+ 
 print(f'당첨번호')
 
-win_nums = [1,2,3,4,5,6]  # 임시번호로 테스트
+# win_nums = [1,2,3,4,5,6]  # 임시번호로 테스트
 print(win_nums)
 
+print('보너스번호 확인')
+print(bonus_num)
 
 correct_num_count = 0
 for my_num in input_numbers:
