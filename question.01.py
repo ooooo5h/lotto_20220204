@@ -37,4 +37,24 @@ for i in range(6):
         
 win_nums.sort()        
 print(f'당첨번호')
+
+win_nums = [1,2,3,4,5,6]  # 임시번호로 테스트
 print(win_nums)
+
+
+correct_num_count = 0
+for my_num in input_numbers:
+    if my_num in win_nums:
+        correct_num_count += 1
+        
+if correct_num_count == 6:
+    print('1등')
+elif correct_num_count == 5:
+    print('3등')
+elif correct_num_count == 4:
+    print('4등')
+elif correct_num_count == 3:
+    print('5등')
+else :
+    print('꽝')
+     
